@@ -1,43 +1,43 @@
 export type MenuItem = {
-  title: string;
-  href?: string;
-  children?: MenuItem[];
-};
+  title: string
+  href?: string
+  children?: MenuItem[]
+}
 
 export const menuConfig: MenuItem[] = [
   {
-    title: "Home",
-    href: "/",
+    title: 'Home',
+    href: '/'
   },
   {
-    title: "Products",
+    title: 'Products',
     children: [
-      { title: "Electronics", href: "/products/electronics" },
-      { title: "Clothing", href: "/products/clothing" },
+      { title: 'Electronics', href: '/products/electronics' },
+      { title: 'Clothing', href: '/products/clothing' },
       {
-        title: "Accessories",
+        title: 'Accessories',
         children: [
-          { title: "Bags", href: "/products/accessories/bags" },
-          { title: "Watches", href: "/products/accessories/watches" },
-          { title: "Jewelry", href: "/products/accessories/jewelry" },
-        ],
-      },
-    ],
+          { title: 'Bags', href: '/products/accessories/bags' },
+          { title: 'Watches', href: '/products/accessories/watches' },
+          { title: 'Jewelry', href: '/products/accessories/jewelry' }
+        ]
+      }
+    ]
   },
   {
-    title: "Services",
+    title: 'Services',
     children: [
-      { title: "Consulting", href: "/services/consulting" },
-      { title: "Development", href: "/services/development" },
-      { title: "Support", href: "/services/support" },
-    ],
+      { title: 'Consulting', href: '/services/consulting' },
+      { title: 'Development', href: '/services/development' },
+      { title: 'Support', href: '/services/support' }
+    ]
   },
   {
-    title: "About",
-    href: "/about",
+    title: 'About',
+    href: '/about'
   },
   {
-    title: "Blog",
-    href: "/blog",
-  },
-];
+    title: 'Blog',
+    href: '/blog'
+  }
+]
