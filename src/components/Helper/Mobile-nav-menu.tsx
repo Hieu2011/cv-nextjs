@@ -54,8 +54,7 @@ function MobileNavItem({
     return (
       <Link
         href={item.href!}
-        className='hover:text-foreground/80 text-foreground/60 flex items-center
-          py-2 text-base font-medium transition-colors'
+        className='hover:text-foreground/80 text-foreground/60 flex items-center py-2 text-base font-medium transition-colors'
         style={{ paddingLeft }}
         onClick={onNavigate}
       >
@@ -68,9 +67,7 @@ function MobileNavItem({
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='hover:text-foreground/80 text-foreground/60 flex w-full
-          items-center justify-between py-2 text-base font-medium
-          transition-colors'
+        className='hover:text-foreground/80 text-foreground/60 flex w-full items-center justify-between py-2 text-base font-medium transition-colors'
         style={{ paddingLeft }}
       >
         {item.title}
@@ -81,9 +78,7 @@ function MobileNavItem({
         />
       </button>
       {isOpen && (
-        <div
-          className='border-border mt-1 ml-4 flex flex-col gap-2 border-l pl-4'
-        >
+        <div className='border-border mt-1 ml-4 flex flex-col gap-2 border-l pl-4'>
           {item.children?.map((child, i) => (
             <MobileNavItem
               key={i}

@@ -25,8 +25,7 @@ function NavItem({ item }: { item: MenuItem }) {
     return (
       <Link
         href={item.href!}
-        className='hover:text-foreground/80 text-foreground/60
-          transition-colors'
+        className='hover:text-foreground/80 text-foreground/60 transition-colors'
       >
         {item.title}
       </Link>
@@ -35,26 +34,13 @@ function NavItem({ item }: { item: MenuItem }) {
 
   return (
     <div className='group relative'>
-      <button
-        className='hover:text-foreground/80 text-foreground/60 flex items-center
-          gap-0.5 transition-colors'
-      >
+      <button className='hover:text-foreground/80 text-foreground/60 flex items-center gap-0.5 transition-colors'>
         {item.title}
         {/* Mũi tên xuống, khi hover group sẽ xoay lên 180 độ */}
-        <ChevronDown
-          className='h-3.5 w-3.5 transition-transform duration-200
-            group-hover:rotate-180'
-        />
+        <ChevronDown className='h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180' />
       </button>
-      <div
-        className='invisible absolute top-full left-0 z-50 w-56 -translate-y-1
-          transform pt-2 opacity-0 transition-all duration-200
-          group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'
-      >
-        <div
-          className='bg-popover text-popover-foreground rounded-lg border p-1
-            shadow-md'
-        >
+      <div className='invisible absolute top-full left-0 z-50 w-56 -translate-y-1 transform pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>
+        <div className='bg-popover text-popover-foreground rounded-lg border p-1 shadow-md'>
           {item.children?.map((child, i) => (
             <SubMenu key={i} item={child} />
           ))}
@@ -71,10 +57,7 @@ function SubMenu({ item }: { item: MenuItem }) {
     return (
       <Link
         href={item.href!}
-        className='hover:bg-accent hover:text-accent-foreground relative flex
-          cursor-default items-center rounded-sm px-2 py-1.5 text-sm
-          outline-none select-none data-[disabled]:pointer-events-none
-          data-[disabled]:opacity-50'
+        className='hover:bg-accent hover:text-accent-foreground relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50'
       >
         {item.title}
       </Link>
@@ -83,33 +66,17 @@ function SubMenu({ item }: { item: MenuItem }) {
 
   return (
     <div className='group/sub relative'>
-      <button
-        className='hover:bg-accent hover:text-accent-foreground relative flex
-          w-full cursor-default items-center justify-between rounded-sm px-2
-          py-1.5 text-sm outline-none select-none'
-      >
+      <button className='hover:bg-accent hover:text-accent-foreground relative flex w-full cursor-default items-center justify-between rounded-sm px-2 py-1.5 text-sm outline-none select-none'>
         {item.title}
-        <ChevronRight
-          className='ml-auto h-3.5 w-3.5 transition-transform duration-200
-            group-hover/sub:translate-x-0.5'
-        />
+        <ChevronRight className='ml-auto h-3.5 w-3.5 transition-transform duration-200 group-hover/sub:translate-x-0.5' />
       </button>
-      <div
-        className='invisible absolute top-0 left-full z-50 ml-1 w-56 opacity-0
-          transition-all duration-200 group-hover/sub:visible
-          group-hover/sub:opacity-100'
-      >
-        <div
-          className='bg-popover text-popover-foreground rounded-lg border p-1
-            shadow-md'
-        >
+      <div className='invisible absolute top-0 left-full z-50 ml-1 w-56 opacity-0 transition-all duration-200 group-hover/sub:visible group-hover/sub:opacity-100'>
+        <div className='bg-popover text-popover-foreground rounded-lg border p-1 shadow-md'>
           {item.children?.map((child, i) => (
             <Link
               key={i}
               href={child.href!}
-              className='hover:bg-accent hover:text-accent-foreground relative
-                flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm
-                outline-none select-none'
+              className='hover:bg-accent hover:text-accent-foreground relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none'
             >
               {child.title}
             </Link>

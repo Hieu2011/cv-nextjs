@@ -34,8 +34,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ReponsiveNav />
-          {children}
+          <div className='relative min-h-screen overflow-hidden bg-white dark:bg-[#020617]'>
+            {/* Background Glow */}
+            <div className='pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(125%_125%_at_50%_90%,#ffffff_40%,#ec4899_100%)] dark:bg-[radial-gradient(circle_600px_at_50%_100px,rgba(236,72,153,0.35),transparent)]' />
+
+            {/* Content */}
+            <div className='relative z-10 flex min-h-screen flex-col'>
+              <ReponsiveNav />
+              <main className='flex-1'>{children}</main>
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
